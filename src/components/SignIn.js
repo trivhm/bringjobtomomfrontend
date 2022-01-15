@@ -16,7 +16,7 @@ export default function SignIn() {
     const user = { phone, password };
     // send the username and password to the server
     const response = await axios.get(
-      "http://localhost:8080/login/" + phone + "/" + password
+      "https://bringjobtomom.herokuapp.com/login/" + phone + "/" + password
     );
     // set the state of the user
 
@@ -29,7 +29,9 @@ export default function SignIn() {
     // store the user in localStorage
     localStorage.setItem("user", dataArray[0]);
     console.log(response.data);
-    console.log("http://localhost:8080/login/" + phone + "/" + password);
+    console.log(
+      "https://bringjobtomom.herokuapp.com/login/" + phone + "/" + password
+    );
   }
 
   console.log(role);
